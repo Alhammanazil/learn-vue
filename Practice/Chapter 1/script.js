@@ -1,5 +1,6 @@
 var dataProduct = {
-products: [
+    maximum: 50,
+    products: [
     {
         "id": "532",
         "name": "Slicker Jacket",

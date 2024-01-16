@@ -11,7 +11,7 @@
 <body class="">
 
     <div class="" id="app">
-        <div class="row d-flex mb-3 align-items-center" v-for="item in products">
+        <div class="row d-flex mb-3 align-items-center" v-for="item in products" v-if="item.price <= Number(maximum)">
             <div class="col-sm-4">
                 <img class="img-fluid" :src="item.image" :alt="item.name">
             </div>
