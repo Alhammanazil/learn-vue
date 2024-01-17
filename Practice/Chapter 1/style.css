@@ -1,0 +1,30 @@
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-details {
+    padding: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
