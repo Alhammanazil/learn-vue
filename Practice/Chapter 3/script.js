@@ -4,6 +4,15 @@ var app = new Vue({
         slugText: 'The Quick #(*!&@ Brown 29'
     },
     computed: {
+        // now: function () {
+        //     var date = new Date();
+        //     return (
+        //         String(date.getHours()) + 
+        //         String(date.getMinutes()) +
+        //         String(date.getSeconds())
+        //     )
+        // },
+ 
         slugetize: function () {
             return this.slugText
                 .toLowerCase()
@@ -11,9 +20,15 @@ var app = new Vue({
                 .replace(/ +/g, '-') + '-' + this.now();
         }
     },
+
     methods: {
         now: function () {
-            return new Date().getTime();
-        }
+            var date = new Date();
+            return (
+                String(date.getHours()) + 
+                String(date.getMinutes()) +
+                String(date.getSeconds())
+            )
+        },
     }
 });
