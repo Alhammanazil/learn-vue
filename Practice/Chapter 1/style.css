@@ -28,3 +28,62 @@
     top: 0;
     z-index: 100;
 }
+
+/* BEGIN: Additional Styles */
+.navbar-text {
+    display: flex;
+    align-items: center;
+}
+
+.badge {
+    margin-left: 5px;
+}
+
+.form-inline {
+    margin-bottom: 20px;
+}
+
+.custom-range {
+    margin-bottom: 20px;
+}
+
+.col-1 {
+    display: flex;
+    align-items: center;
+}
+
+.col-sm-4 {
+    display: flex;
+    align-items: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-info {
+    margin-top: 0;
+}
+
+.float-right {
+    margin-top: 10px;
+}
+
+/* BEGIN: Updated Styles */
+body {
+    padding-top: 70px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* END: Updated Styles */
