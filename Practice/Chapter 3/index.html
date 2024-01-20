@@ -29,7 +29,7 @@
 
         <h1>Myshop()</h1>
 
-        <transition name="fade">
+        <transition name="custom" enter-active-class="animated fadeInDown" leave-active-class="animated">
             <div v-if="style.sliderStatus">
                 <div class="align-items-center" :class="sliderState">
                     <label for="" :class="style.label">Max</label>
