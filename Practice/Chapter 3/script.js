@@ -1,3 +1,14 @@
+Vue.component ('price', {
+    data: function() {
+        return {
+            prefix: '$',
+            value: 35,
+            precission: 2
+        }
+    },
+    template: `<span>{{prefix}} {{value.toFixed(precission)}}</span>`
+});
+
 var app = new Vue({
     el: '#app',
     data: {
