@@ -16,7 +16,7 @@ var app = new Vue({
             .then(data => {
                 this.products = data;
             });
-    },
+    }, // Add a closing parenthesis here
     filters: {
         currencyFormat: function (value) {
             return '$' + Number.parseFloat(value).toFixed(2);
@@ -72,6 +72,14 @@ var app = new Vue({
                 this.cart[productIndex].qty++
             } else {
                 this.cart.push({product: product, qty: 1});
+            }
+        },
+
+        deleteItem: function(key) {
+            if (this.cart[key].qty > 1) {
+                this.cart[key].qty--;
+            } else {
+                this.cart.splice(key, 1);
             }
         }
     }
