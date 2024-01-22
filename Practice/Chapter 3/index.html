@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png" alt="external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo" type="image/x-icon">
     <title>VueJS Basic</title>
 </head>
 
@@ -19,7 +20,7 @@
                 <button class="btn btn-sm btn-outline-success" @click="style.sliderStatus = !style.sliderStatus">
                     <i class="fas fa-dollar-sign"></i>
                 </button>
-                <div class="ml-2" v-if="cart.length > 0">
+                <div class="ml-2">
                     <button class="btn btn-success btn-sm dropdown-toggle" id="dropdownCart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <b>cart:</b>
                         <span class="badge badge-pill badge-success">{{ cart.length }}</span>
@@ -30,8 +31,8 @@
                                 <span class="badge badge-pill badge-warning align-text-top mr-1">
                                     {{ item.qty }}
                                 </span>
-                                {{ item.name }}
-                                <b>{{ item.price | currencyFormat }}</b>
+                                {{ item.product.name }}
+                                <b>{{ item.product.price * item.qty | currencyFormat }}</b>
                             </div>
                         </div>
                     </div>
@@ -40,7 +41,7 @@
         </nav>
         <br>
 
-        <h1>Oldshop(✔)</h1>
+        <h1><img width="48" height="48" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png" alt="external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo"/>ueShop()</h1>
 
         <transition name="custom" enter-active-class="animated fadeInDown" leave-active-class="animated slideOutRight">
             <div v-if="style.sliderStatus">
@@ -63,7 +64,7 @@
                 <div class="col">
                     <h3 class="text-info">{{ item.name }}</h3>
                     <p class="mb-0">{{ item.description }}</p>
-                    <div class="h5 float-right">${{ item.price | currencyFormat }}</div>
+                    <div class="h5 float-right">{{ item.price | currencyFormat }}</div>
                 </div>
             </div>
         </transition-group>
