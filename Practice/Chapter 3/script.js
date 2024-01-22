@@ -1,4 +1,4 @@
-Vue.filters('currencyFormat', function(value) {
+Vue.filter('currencyFormat', function(value) {
     return Number.parseFloat(value).toFixed(2);
 });
 
@@ -32,16 +32,16 @@ var app = new Vue({
         }
     },
     methods: {
-        before: function (el) {
+        before: function(el) {
             el.className = 'd-none'
         },
-        enter: function (el) {
+        enter: function(el) {
             var delay = el.dataset.index * 100;
             setTimeout(function() {
                 el.className = 'row d-flex mb-3 align-items-center animated fadeInRight'
             }, delay)
         },
-        leave: function (el) {
+        leave: function(el) {
             var delay = el.dataset.index * 100;
             setTimeout(function() {
                 el.className = 'row d-flex mb-3 align-items-center animated fadeOutRight'
