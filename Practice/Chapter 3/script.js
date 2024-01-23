@@ -39,7 +39,7 @@ Vue.component ('product-list', {
     <transition-group name="fade" tag="div" @beforeEnter="before" @enter="enter" @leave="leave" enter-active-class="animated fadeInDown" leave-active-class="animated slideOutRight">
     <div class="row d-none mb-3 align-items-center" v-for="(item, index) in products" :key="item.id" v-if="item.price <= Number(maximum)" :data-index="index">
         <div class="col-1 m-auto">
-            <button class="btn btn-info" v-on:click="addItem(item)">+</button>
+            <button class="btn btn-info" @click="$emit('add', item)">+</button>
         </div>
         <div class="col-sm-4">
             <img :src="item.image" :alt="item.name" class="img-fluid d-block">
@@ -102,8 +102,6 @@ var app = new Vue({
         }
     },
     methods: {
-
-        },
         addItem: function(product) {
             var productIndex;
             var productExist = this.cart.filter(function(item, index) {
@@ -130,4 +128,4 @@ var app = new Vue({
             }
         }
     }
-);
+});
